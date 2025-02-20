@@ -46,6 +46,15 @@ sshd # start ssh daemon
 ssh -p 8022 u0_a227@192.168.68.181
 #+END_SRC
 
+*** USB SSH
+- https://glow.li/posts/access-termux-via-usb/
+- https://gist.github.com/devmaars/8e33a1edefc4b048a433651a1fc89844
+  - Need USB Debugging enabled on android device, and ADB on desktop. Connect via a USB cable.
+#+BEGIN_SRC sh
+alias usbSSH="adb forward tcp:8022 tcp:8022 && adb forward tcp:8080 tcp:8080&& ssh localhost -p 8022"
+#+END_SRC
+
+
 *** packages
 #+BEGIN_SRC sh
 pkg install git python
