@@ -58,6 +58,28 @@ pkg install opencv-python
 git clone https://github.com/fxkrait/piletexodus-2025
 #+END_SRC
 
+
+*** Github Deploy Key
+- https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys
+#+BEGIN_SRC sh
+ssh-keygen -t ed25519 -C "your_email@example.com" # hit enter, do no password
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+git config --global user.name "My Name"
+git config --global user.email "[email protected]"
+git config --list
+#+END_SRC
+
+*** ssh git config (~/.ssh/config)
+#+begin_src text
+Host github-YOU-PICK-HOST-NAME
+    HostName github.com
+    AddKeysToAgent yes
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_ed25519
+#+end_src
+
+
 * Notes
 - termux-camera-photo has dark photos, because of:
   - https://github.com/termux/termux-api/issues/52
