@@ -1,0 +1,1 @@
+ nix-shell -p python310Packages.opencv4

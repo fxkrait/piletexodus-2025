@@ -1,0 +1,25 @@
+*Melody Feed Index:*
+- [[file:bibleRiot-feed.org]]
+
+
+-------
+
+
+*Space occupied by this feed:*
+
+average file size of a melody (kb):
+#+begin_src text
+# https://stackoverflow.com/questions/9195493/unix-find-average-file-size
+ls -l | gawk '{sum += $5; n++;} END {print sum/n;}'
+359739
+#+end_src
+
+1 melody/day (most days):
+#+begin_src text
+1 melody/day * 365 day/year * 360 kb/melody * 1 mb/1024 kb = 128 mb/year
+#+end_src
+
+3 melodies/day (worst case):
+#+begin_src text
+ 128 mb/year * 3 = 384 mb/year
+#+end_src

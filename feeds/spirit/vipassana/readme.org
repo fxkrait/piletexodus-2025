@@ -1,0 +1,10 @@
+*Meditation Feed Index:*
+- [[file:vipassana-feed.org]]
+
+
+*Space occupied by this feed:*
+#+begin_src text
+88 kb/image * 2 image/day *  365 days/1 year = 64240 kb/year
+64240 kb/year * 1 mb/1024 kb = 62 mb/year
+#+end_src
+

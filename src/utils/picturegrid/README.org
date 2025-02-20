@@ -1,0 +1,65 @@
+Uses:
+- proof-of-work for meditation, or other related activities.
+
+File:
+- ~picturegrid64min.py~
+  - 64 pictures, 1/min.
+  
+Output Format:
+- ~MM-DD-YY-HH-MM-meditation64.jpg~
+
+200x200 output (89kb):
+
+[[file:ex_image_200x200.png]]
+
+
+
+* Run Guide
+** Picture Grid
+- 2025-photo-test.sh
+** Manual Photo (LibreCamera)
+- Take photo in LibreCamera
+- 2025-renameAnMovePhoto.sh
+- 
+* Install Guide
+** Android
+*** Apps
+- LibreCamera
+  - Portrait mode lock, save to a specific folder.
+
+** Termux
+*** acces to android file system
+#+BEGIN_SRC sh
+termux-setup-storage
+#+END_SRC
+*** SSH access into termux
+#+BEGIN_SRC sh
+pkg install ssh
+passwd # set ssh password
+sshd # start ssh daemon
+#+END_SRC
+
+**** SSH Example
+#+BEGIN_SRC sh
+# whoami
+# Get device ip from wifi settings
+ssh -p 8022 u0_a227@192.168.68.181
+#+END_SRC
+
+*** packages
+#+BEGIN_SRC sh
+pkg install git python
+pkg install x11-repo # get access to opencv-python package
+pkg install opencv-python
+#+END_SRC
+
+*** Clone
+#+BEGIN_SRC sh
+git clone https://github.com/fxkrait/piletexodus-2025
+#+END_SRC
+
+* Notes
+- termux-camera-photo has dark photos, because of:
+  - https://github.com/termux/termux-api/issues/52
+    - It is not fixed. The MR does not fix it.
+https://dev.to/ammar-hussein/setup-pygame-in-termux-g9b

@@ -1,0 +1,13 @@
+*Space occupied by this feed:*
+#+begin_src text
+80 kb/image * 1 image/day *  365 days/1 year = 29200 kb/year
+29200 kb/year * 1 mb/1024 kb = 28 mb/year
+#+end_src
+
+*Images are being compressed rather ruthlessly to reduce space:*
+#+begin_src text
+# https://www.digitalocean.com/community/tutorials/reduce-file-size-of-images-linux
+  convert 04-25-23.jpeg -quality 10% 04-25-23_10percentQuality.jpeg                                  
+#+end_src
+- 500 kb -> 80 kb
+
