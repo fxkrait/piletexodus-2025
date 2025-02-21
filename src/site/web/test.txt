@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <audio controls preload="none"><source src="feeds/melody/files/webm_96k/AUDIO_FILE_NAME_HERE" type="audio/webm"></audio>
+    </body>
+</html>
